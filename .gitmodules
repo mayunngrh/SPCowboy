@@ -1,0 +1,3 @@
+[submodule "SPCowboy"]
+	path = SPCowboy
+	url = https://github.com/mayunngrh/SPCowboy.git
