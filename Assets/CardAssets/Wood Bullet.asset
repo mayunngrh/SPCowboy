@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4e10202115d44f09f2c0cff2766b2a, type: 3}
   m_Name: Wood Bullet
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  cardName: 
-  cardType: 0
-  energyCost: 0
-  description: 
+  cardName: 'Wood Bullet '
+  cardType: 1
+  energyCost: 1
+  description: 5 dmg +5 vs Earth
   artwork: {fileID: 0}
-  hitZoneDamage: 0
-  hitZoneWidth: 50
-  element: 0
-  elementalBonus: 0
-  bonusVsElement: 0
+  hitZoneDamage: 5
+  hitZoneWidth: 35
+  element: 3
+  elementalBonus: 5
+  bonusVsElement: 5
   markerSpeedModifier: 0
   zoneWidthModifier: 0
   extraBulletSlots: 0

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4e10202115d44f09f2c0cff2766b2a, type: 3}
   m_Name: First Aid Kit
   m_EditorClassIdentifier: Assembly-CSharp::CardData
-  cardName: 
-  cardType: 0
-  energyCost: 0
-  description: 
+  cardName: 'First Aid Kit '
+  cardType: 5
+  energyCost: 1
+  description: Restore 10 HP
   artwork: {fileID: 0}
   hitZoneDamage: 0
   hitZoneWidth: 50
@@ -25,6 +25,6 @@ MonoBehaviour:
   markerSpeedModifier: 0
   zoneWidthModifier: 0
   extraBulletSlots: 0
-  healAmount: 0
+  healAmount: 10
   isTradeoff: 0
   tradeoffDescription: 
