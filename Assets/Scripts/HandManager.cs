@@ -15,7 +15,8 @@ public class HandManager : MonoBehaviour
     public RectTransform drawPileIcon;
     public TextMeshProUGUI drawPileCountText;
     public float drawAnimDuration = 0.3f;
-    public float drawDelayBetweenCards = 0.15f;
+    public float drawDelayBetweenCards = 0.35f;
+    public float initialDrawDelay = 0.5f;
 
     [Header("Discard Animation")]
     public RectTransform discardPileIcon;
@@ -104,6 +105,8 @@ public class HandManager : MonoBehaviour
 
         // Animate each card flying from pile
         Vector3 pilePos = GetDrawPileScreenPos();
+
+        yield return new WaitForSeconds(initialDrawDelay);
 
         for (int i = 0; i < cardRTs.Count; i++)
         {
@@ -341,7 +344,6 @@ public class HandManager : MonoBehaviour
                 break;
             }
 
-            // Just call directly — not a coroutine
             combatManager.ApplyCardEffect(card.cardData);
 
             yield return new WaitForSeconds(0.3f);
@@ -359,6 +361,9 @@ public class HandManager : MonoBehaviour
             UpdateDiscardPileCount();
             UpdateUnselectedCardPositions();
         }
+
+        // All selected cards played — automatically proceed to shooting phase
+        combatManager.EndTurn();
     }
 
     public IEnumerator DiscardRemainingCards()

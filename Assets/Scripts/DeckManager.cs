@@ -14,11 +14,6 @@ public class DeckManager : MonoBehaviour
     {
         InitializeDeck();
         DrawHand();
-        
-        
-        HandManager handManager = FindFirstObjectByType<HandManager>();
-        if (handManager != null)
-            handManager.DisplayHand();
     }
 
     void InitializeDeck()
